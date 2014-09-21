@@ -7,7 +7,7 @@
     <ignored path="Github Main.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="fae16582-c41a-4e92-a3d8-1253aa91aaad" time="1411242868530" ignored="false" />
-    <file path="/index.html" changelist="fae16582-c41a-4e92-a3d8-1253aa91aaad" time="1411277536759" ignored="false" />
+    <file path="/index.html" changelist="fae16582-c41a-4e92-a3d8-1253aa91aaad" time="1411281070995" ignored="false" />
     <file path="/style.css" changelist="fae16582-c41a-4e92-a3d8-1253aa91aaad" time="1411244065316" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,9 +72,16 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="97" selection-start="5468" selection-end="5468" vertical-scroll-proportion="0.24261084">
+            <state line="186" column="140" selection-start="11975" selection-end="11975" vertical-scroll-proportion="0.57512313">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SO.jpg" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/SO.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -112,13 +119,6 @@
       </file>
       <file leaf-file-name="bg.jpg" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/images/bg.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pic05.jpg" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/pic05.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -492,11 +492,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/pic05.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/pic11.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -571,9 +566,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/SO.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="97" selection-start="5468" selection-end="5468" vertical-scroll-proportion="0.24261084">
+        <state line="186" column="140" selection-start="11975" selection-end="11975" vertical-scroll-proportion="0.57512313">
           <folding />
         </state>
       </provider>
