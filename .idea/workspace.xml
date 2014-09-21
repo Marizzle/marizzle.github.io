@@ -7,7 +7,7 @@
     <ignored path="Github Main.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="fae16582-c41a-4e92-a3d8-1253aa91aaad" time="1411242868530" ignored="false" />
-    <file path="/index.html" changelist="fae16582-c41a-4e92-a3d8-1253aa91aaad" time="1411281070995" ignored="false" />
+    <file path="/index.html" changelist="fae16582-c41a-4e92-a3d8-1253aa91aaad" time="1411281251937" ignored="false" />
     <file path="/style.css" changelist="fae16582-c41a-4e92-a3d8-1253aa91aaad" time="1411244065316" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +72,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="186" column="140" selection-start="11975" selection-end="11975" vertical-scroll-proportion="0.57512313">
+            <state line="204" column="98" selection-start="13722" selection-end="13722" vertical-scroll-proportion="0.20566502">
               <folding />
             </state>
           </provider>
@@ -573,7 +573,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="140" selection-start="11975" selection-end="11975" vertical-scroll-proportion="0.57512313">
+        <state line="204" column="98" selection-start="13722" selection-end="13722" vertical-scroll-proportion="0.20566502">
           <folding />
         </state>
       </provider>
