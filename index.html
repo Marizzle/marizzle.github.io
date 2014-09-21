@@ -161,67 +161,115 @@
                                 </div>
                             </article>
 
-                    <!-- Stack Overflow -->
-                        <article id="SO" class="panel">
+                        <!-- Stack Overflow -->
+                            <article id="SO" class="panel">
+                                <header>
+                                    <h2>Stack Overflow Top Users Visualization</h2>
+                                </header>
+                                <img class="img img-responsive" src="images/SO.jpg" alt=""/>
+                                <h3>Summary</h3>
+                                <p class="indented" align="justify">
+                                    A Stack Overflow visualization of the Top 5 users based on their reputations. Allows the user to visualize
+                                    how many answers the Top User has made with respect to the reputation of the person they are answering to.
+                                    Programmed using the Processing library and Handy library from gicentreutils, this visualization provides a
+                                    unique and playful interface with filters for time ranges, days, and months.
+                                </p>
+                                <h3>Thoughts</h3>
+                                <p class="indented" align="justify">
+                                    This was the second project for ECS 163 (Information Interfaces) and was the first one to involve partners. My partner
+                                    for this assignment was Rutvi Kotak (link below!) and this project was the first that exposed us both to Processing.
+                                    We both had experience with Java before this assignment so working with Processing made things relatively easier than
+                                    with D3.js, the library we had to use for the first project in ECS 163. I was quite glad that I had taken ECS 175 (Computer Graphics)
+                                    before this class as it made things easier for me to think of how to do things like animations and such using Processing since working
+                                    with Processing was a bit like working with OpenGL only a bit less complicated. For example, the draw() method in Processing is analogous
+                                    to the GLpaint method in openGL.
+                                </p>
+                                <p class="indented" align="justify">
+                                    This project underwent a variety of changes in terms of structures. Both Rutvi and I had a variety of wild and crazy
+                                    ideas for how we wanted to visualize the data set, many of which were awesome but the real difficulty here was time.
+                                    Simply put we didn't have enough time to implement every possible thing we would have wanted, but we were both very
+                                    happy with what we were able to accomplish at the end. You'll be able to see some of the drastic changes as the project
+                                    progressed below!
+                                </p>
+                                <p class="indented" align="justify">
+                                    Much of the creativity can be attributed to Rutvi as she was the one to suggest using the Handy library for this project
+                                    which helped make our project really stand out among all the others (we managed to get extra credit on this one!). One of the
+                                    things I really liked working on was the overall UI of the visualization. Most of the components for this project were made from
+                                    scratch with the aid of Handy for giving it that cartoony like aesthetic. This was quite fun as it proved to be different from
+                                    any of the other assignments I've worked on prior.
+                                </p>
+
+
+                                <h3>Evolution</h3>
+                                <strong><a href="images/cities.gif">City Skyscrapers</a></strong> <br>
+                                <strong><a href="images/rectangles.gif">Growing Rectangles</a></strong>
+
+
+                                <h3>Libraries and Tools/Resources</h3>
+                                <ol>
+                                    <li>Processing</li>
+                                    <li>Handy from gicentreutils</li>
+                                    <li>Stack Exchange for querying data</li>
+                                </ol>
+
+
+                                <a href="" class="btn btn-block btn-social btn-linkedin">
+                                    <i class="fa fa-linkedin-square"></i> Rutvi Kotak
+                                </a>
+
+                                <div class="wrapper">
+                                    <button type="button" class="btn btn-lg btn-primary" disabled="disabled">Go to project page</button>
+                                </div>
+                            </article>
+
+                        <!-- Unitrans -->
+                        <article id="Unitrans" class="panel">
                             <header>
-                                <h2>Stack Overflow Top Users Visualization</h2>
+                                <h2>Unitrans October 2012 Visualization</h2>
                             </header>
-                            <img class="img img-responsive" src="images/SO.jpg" alt=""/>
+                            <img class="img img-responsive" src="images/Unitrans.png" alt=""/>
                             <h3>Summary</h3>
                             <p class="indented" align="justify">
-                                A Stack Overflow visualization of the Top 5 users based on their reputations. Allows the user to visualize
-                                how many answers the Top User has made with respect to the reputation of the person they are answering to.
-                                Programmed using the Processing library and Handy library from gicentreutils, this visualization provides a
-                                unique and playful interface with filters for time ranges, days, and months.
+                                A Unitrans, the bus system at Davis, boarding and deboarding visualization. Provides the number of people
+                                who have got on or off the bus during the course of the month with various filters available. The user
+                                can choose to filter on or off bus lines, stops, hours of the day, and days of the month and week.
                             </p>
                             <h3>Thoughts</h3>
                             <p class="indented" align="justify">
-                                This was the second project for ECS 163 (Information Interfaces) and was the first one to involve partners. My partner
-                                for this assignment was Rutvi Kotak (link below!) and this project was the first that exposed us both to Processing.
-                                We both had experience with Java before this assignment so working with Processing made things relatively easier than
-                                with D3.js, the library we had to use for the first project in ECS 163. I was quite glad that I had taken ECS 175 (Computer Graphics)
-                                before this class as it made things easier for me to think of how to do things like animations and such using Processing since working
-                                with Processing was a bit like working with OpenGL only a bit less complicated. For example, the draw() method in Processing is analogous
-                                to the GLpaint method in openGL.
+                                This was the first project given in ECS163 (Information Interfaces) which required us to visualize a dataset
+                                compiled from Unitrans. The dataset included the bus line, the bus stop, the date and time, and the number
+                                of people who boarded and deboarded the bus at that particular stop. The main requirement for this assignment
+                                was D3.js, the first of the two major visualization libraries covered in the course. This assignment was pretty
+                                straightforward as I had experience with web development which proved to be an advantage as a large chunk of the class
+                                had no prior experience with it.
                             </p>
                             <p class="indented" align="justify">
-                                This project underwent a variety of changes in terms of structures. Both Rutvi and I had a variety of wild and crazy
-                                ideas for how we wanted to visualize the data set, many of which were awesome but the real difficulty here was time.
-                                Simply put we didn't have enough time to implement every possible thing we would have wanted, but we were both very
-                                happy with what we were able to accomplish at the end. You'll be able to see some of the drastic changes as the project
-                                progressed below!
+                                I can consider this my first "real" visualization and it was definitely an experience. There was definitely a big
+                                learning curve for D3 and as such I spent a good chunk of my time looking at examples and toying around with some
+                                thought experiments which helped me develop an understanding of how to use it. Again, because it was my first
+                                visualization there are a lot of areas which looking back could have been improved upon and I would have liked to
+                                have done more but the final product is functional. It was much easier to make beautiful looking interfaces given
+                                all the libraries available for web development which make making the layout a lot easier.
                             </p>
-                            <p class="indented" align="justify">
-                                Much of the creativity can be attributed to Rutvi as she was the one to suggest using the Handy library for this project
-                                which helped make our project really stand out among all the others (we managed to get extra credit on this one!). One of the
-                                things I really liked working on was the overall UI of the visualization. Most of the components for this project were made from
-                                scratch with the aid of Handy for giving it that cartoony like aesthetic. This was quite fun as it proved to be different from
-                                any of the other assignments I've worked on prior.
-                            </p>
-
-
-                            <h3>Evolution</h3>
-                            <strong><a href="images/cities.gif">City Skyscrapers</a></strong> <br>
-                            <strong><a href="images/rectangles.gif">Growing Rectangles</a></strong>
-
 
                             <h3>Libraries and Tools/Resources</h3>
                             <ol>
-                                <li>Processing</li>
-                                <li>Handy from gicentreutils</li>
-                                <li>Stack Exchange for querying data</li>
+                                <li>D3.js</li>
+                                <li>jQuery and jQueryUI</li>
+                                <li>Bootstrap</li>
+                                <li>Bootstrap Flat UI</li>
+                                <li>Foundation</li>
+                                <li>jQRangeSlider</li>
+                                <li>Timepicker for jQuery</li>
+                                <li>ferroMenu</li>
                             </ol>
 
-
-                            <a href="" class="btn btn-block btn-social btn-linkedin">
-                                <i class="fa fa-linkedin-square"></i> Rutvi Kotak
-                            </a>
-
                             <div class="wrapper">
-                                <button type="button" class="btn btn-lg btn-primary" disabled="disabled">Go to project page</button>
+                                <button href="/Unitrans-October-2012-Visualization/" type="button" class="btn btn-lg btn-primary">Launch Visualization!</button>
                             </div>
                         </article>
-						<!-- Contact -->
+
+						<!-- About -->
 							<article id="about" class="panel">
 								<header>
 									<h2>About Me</h2>
@@ -252,8 +300,6 @@
                                     <i class="fa fa-linkedin-square"></i> Mario Yepez-Olvera
                                 </a>
                             </article>
-
-
 					</div>
 		
 				<!-- Footer -->
