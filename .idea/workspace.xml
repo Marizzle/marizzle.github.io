@@ -2,73 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fae16582-c41a-4e92-a3d8-1253aa91aaad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/images/Logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/images/Spotify.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/images/avatar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/images/banner.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/images/overlay.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/images/pic02.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/images/pic03.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/images/pic04.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/images/pic05.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/images/pic06.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/images/pic07.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/images/pic08.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/select2/select2-spinner.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/select2/select2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/select2/select2x2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/images/spot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/ie/PIE.htc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/SpotVis.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/ie/backgroundsize.min.htc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/data/backup.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/js/crossfilter.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/js/d3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/data/data.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/dc.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/js/dc.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/example-styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/ie/images/grad0-15.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/ie/html5shiv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/indexbackup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/js/init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/js/jquery.scrolly.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/js/jquery.scrollzer.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/select2/select2-bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/select2/select2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/select2/select2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/js/skel-layers.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/skel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/js/skel.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/style-mobile.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/style-narrow.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/style-narrower.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/style-normal.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/style-wide.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/ie/v8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/css/ie/v9.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpotVis/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpotVis/index.html" afterPath="$PROJECT_DIR$/SpotVis/index.html" />
     </list>
     <ignored path="Github Main.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -138,13 +72,22 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="24" selection-start="2541" selection-end="2541" vertical-scroll-proportion="-0.625">
+            <state line="278" column="0" selection-start="18996" selection-end="21811" vertical-scroll-proportion="-7.4166665">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="init.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SpotVis/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="817" column="12" selection-start="38845" selection-end="38845" vertical-scroll-proportion="6.891365">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="init.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SpotVis/js/init.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -169,15 +112,6 @@
         <entry file="file://$PROJECT_DIR$/images/SO.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap-social.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/bootstrap-social.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -238,6 +172,7 @@
       <list>
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/SpotVis/index.html" />
       </list>
     </option>
   </component>
@@ -618,11 +553,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/pic05.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/pic08.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -697,16 +627,23 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/SpotVis/js/init.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="24" selection-start="2541" selection-end="2541" vertical-scroll-proportion="-0.625">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpotVis/js/init.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="278" column="0" selection-start="18996" selection-end="21811" vertical-scroll-proportion="-7.4166665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpotVis/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="817" column="12" selection-start="38845" selection-end="38845" vertical-scroll-proportion="6.891365">
           <folding />
         </state>
       </provider>
