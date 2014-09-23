@@ -1,0 +1,815 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Opus</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.scrollzer.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+        <script src="js/d3.min.js"></script>
+
+        <script src="js/crossfilter.min.js"></script>
+        <script src="js/dc.min.js"></script>
+        <link rel="stylesheet" href="css/dc.css" />
+
+
+        <link rel="stylesheet" href="select2/select2.css"/>
+        <link rel="stylesheet" href="select2/select2-bootstrap.css"/>
+
+        <script src="js/index.js"></script>
+        <link rel="stylesheet" href="css/example-styles.css"/>
+
+        <script src="select2/select2.min.js"></script>
+        <script>
+            $(document).ready(function() { $("#e9").select2(); });
+            $(document).ready(function() { $("#e10").select2(); });
+        </script>
+
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+        </noscript>
+
+
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header" class="skel-layers-fixed">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span style="background-color: #000000" class="image avatar48"><img src="http://www.bennylingbling.com/wp-content/uploads/2012/06/Spotify-icon.png" alt="" /></span>
+							<h1 id="title">Opus</h1>
+                            <p>A Spotify History Visualization</p>
+
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+							
+								Prologue's nav expects links in one of two formats:
+								
+								1. Hash link (scrolls to a different section within the page)
+								
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+							
+							-->
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-spotify">Intro</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-bar-chart">Explore Data</span></a></li>
+								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-music">Top Tracks</span></a></li>
+							</ul>
+						</nav>
+
+
+                </div>
+				
+				<div class="bottom">
+                    <!-- Social Icons-->
+                    <ul class="icons">
+                        <li><a href="http://open.spotify.com/user/1220253102" class="icon fa-spotify"><span class="label">Spotify</span></a></li>
+                        <li><a href="http://linkedin.com/in/myepezolvera/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+                        <li><a href="https://github.com/Marizzle" class="icon fa-github"><span class="label">Github</span></a></li>
+                        <li><a href="http://visualizethisfor.me" class="icon fa-user"><span class="label">Personal Webpage</span></a></li>
+                        <li><a href="mailto:myepez@ucdavis.edu" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                    </ul>
+                    <iframe id="player" src="https://embed.spotify.com/?uri=spotify:track:5q0jpbVxA81wBmADz8ODeS" width="100%" height="80" frameborder="0" allowtransparency="true"></iframe>
+
+
+				</div>
+
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt">Welcome! To <strong>Opus</strong></h2>
+								<p>A proof of concept of how one can explore the collection of music that a user has listened to. </p>
+							</header>
+							
+							<footer>
+								<a href="#portfolio" class="button scrolly">Start Exploring!</a>
+							</footer>
+
+						</div>
+					</section>
+					
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+					
+							<header>
+								<h2>Explore Data</h2>
+							</header>
+
+                            <div id="vis"></div>
+                            <p>Select some artists</p>
+                            <select style="width:100%; font-size: 12"  multiple id="e9"></select>
+                            <p>Select some songs</p>
+                            <select style="width:100%; font-size: 12"  multiple id="e10"></select>
+
+
+
+                            <div id="box" class="row">
+                                <div style="text-align: left" class="span6">
+                                    <h4>Songs by Days of the Week</h4>
+                                    <div id="day-of-week-chart">
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div style="text-align: left" class="span6">
+                                    <h4>Songs by Time of the Day</h4>
+                                    <div id="hour-chart1">
+
+                                    </div>
+                                    <div id="hour-chart2">
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div id="box2" class="row">
+                                <h4>Songs Played Per Day</h4>
+                                <div id="songs-line-chart">
+
+                                </div>
+                                <div id="songs-per-day-chart">
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <script>
+                                var artists = [];
+                                var songs = [];
+                                var selArtists = [];
+                                var selSongs = [];
+                                var removedArtists = [];
+                                var dateFormat = d3.time.format("%m/%d/%Y");
+                                var timeFormat = d3.time.format("%I:%Mam");
+                                var timeFormat2 = d3.time.format("%I:%Mpm");
+                                d3.csv("data/data.csv", function (data) {
+
+                                    // format our data
+                                    //var dtgFormat = d3.time.format("%Y-%m-%dT%H:%M:%S");
+
+                                    data.forEach(function(d) {
+                                        d.Mes = d.Month;
+                                        d.Dia = +d.Day;
+                                        d.Ano = +d.Year;
+                                        d.Track = d.Song;
+                                        d.Artista = d.Artist;
+                                        var fullDate = convertMonthNameToNumber(d.Mes)+"/"+ d.Dia+"/"+ d.Ano;
+                                        d.date = dateFormat.parse(fullDate);
+
+                                        d.Tiempo = timeFormat.parse(d.Time);
+                                        if(d.Tiempo == null){
+                                            d.Tiempo = timeFormat2.parse(d.Time);
+                                            d.Tiempo.setHours(d.Tiempo.getHours() + 12);
+
+                                            if(d.Tiempo.getHours() < 12)
+                                                d.Tiempo.setHours((d.Tiempo.getHours() + 12));
+
+                                        }
+
+                                        d.stringHour = d.Tiempo.getHours().toString();
+
+                                        checkAndAdd(d.Artista);
+                                    });
+
+
+                                    //setting up select box
+                                    artists.sort();
+
+
+                                    var select = document.getElementById('e9');
+
+                                    for (var i = 0; i<= artists.length; i++){
+                                        var opt = document.createElement('option');
+                                        opt.value = artists[i];
+                                        opt.innerHTML = artists[i];
+                                        select.appendChild(opt);
+                                    }
+
+
+                                    // Create the dc.js chart objects & link to div
+                                    var dayOfWeekChart = dc.rowChart("#day-of-week-chart");
+                                    var hourChart1 = dc.pieChart("#hour-chart1");
+                                    var hourChart2 = dc.barChart("#hour-chart2");
+
+
+                                    var songChart = dc.barChart("#songs-per-day-chart");
+                                    var lineChart = dc.barChart("#songs-line-chart");
+
+                                    // Run the data through crossfilter and load our 'facts'
+                                    var facts = crossfilter(data);
+
+
+                                    //Day Dimension
+                                    var dayOfWeek = facts.dimension(function (d) {
+                                        var day = d.date.getDay();
+                                        var name=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+                                        return day+"."+name[day];
+                                    });
+
+                                    var dayOfWeekGroup = dayOfWeek.group();
+
+                                    // Create dataTable dimension
+                                    var timeDimension = facts.dimension(function (d) {
+                                        return d.Track;
+                                    });
+
+                                    // Setup the charts
+
+
+                                    //Day of the Week Chart
+                                    var width = document.getElementById("box").offsetWidth;
+                                    dayOfWeekChart.width(width)
+                                            .height(220)
+                                            .group(dayOfWeekGroup)
+                                            .dimension(dayOfWeek)
+                                            .ordinalColors(['#679214','#74a417','#81b71a','#8dc91c','#9adb1f','#a3e12e','#abe340'])
+                                            .label(function (d){
+                                                return d.key.split(".")[1];
+                                            })
+                                            .title(function (d) {
+                                                return d.value;
+                                            })
+                                            //.elasticX(true)
+                                            .xAxis().ticks(4);
+
+
+
+                                    //Time of the day charts
+                                    var hourDimension = facts.dimension((function(d){
+                                           var hour = d.Tiempo.getHours();
+                                            if ( 6<= hour && hour <= 11)
+                                                return "1. Morning (6:00am to 11:59am)";
+                                            else if (12 <= hour && hour <= 16)
+                                                return "2. Afternoon (12:00pm to 4:59pm)";
+                                            else if (17 <= hour && hour <=20)
+                                                return "3. Evening (5:00pm to 8:59pm)";
+                                            else if (21 <= hour && hour <= 23)
+                                                return "4. Night (9:00pm to 11:59pm)";
+                                            else
+                                                return "5. Late Night (12:00am to 5:59am)";
+                                    }));
+
+                                    var timeByDay = hourDimension.group().reduceCount(function (d) {
+                                        return d.Tiempo.getHours().toString();
+                                    } );
+
+                                    hourChart1.width(width)
+                                            .height(250)
+                                            .radius(120)
+                                            .innerRadius(30)
+                                            .dimension(hourDimension)
+                                            .group(timeByDay)
+                                            .legend(dc.legend().x(20))
+                                            .label(function (d) {
+                                                return d.value;
+                                            })
+                                            .ordinalColors(['#81b71a','#72a217','#648e14','#567911','#47650e']);
+
+                                    var hourPerDayDimension = facts.dimension((function(d){
+                                        return d.stringHour;
+                                    }));
+
+                                    var hoursPerDayGroup = hourPerDayDimension.group();
+
+
+
+                                    hourChart2
+                                            .width(width)
+                                            .height(400)
+                                            .transitionDuration(200)
+                                            .margins({top: 0, right: 50, bottom: 25, left: 40})
+                                            .dimension(hourPerDayDimension)
+                                            .group(hoursPerDayGroup)
+                                            .x(d3.scale.ordinal().domain(["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"]))
+                                            .xUnits(dc.units.ordinal)
+                                            .ordinalColors(['#81b71a'])
+                                            .elasticY(true)
+                                            .brushOn(false)
+                                            .xAxis()
+                                            .ticks(20)
+                                            .tickFormat(function(d){ var h = +d; if(h == 0) return "12 AM"; else if (h < 12) return h + " AM";  else if (h == 12) return h + " PM" ; else if(h-12 == 12) return ""; else return (h-12)+" PM"});
+
+
+                                    //Render Line Chart
+                                    var moveTime = facts.dimension(function (d) {
+                                        return d.Tiempo.getHours();
+                                    });
+
+                                    var timeByMonthGroup = moveTime.group().reduceCount(function (d) {
+                                        return d.Tiempo.getHours();
+                                    } );
+
+                                    console.log(timeByMonthGroup);
+
+
+                                    // time chart
+                                    var moveMonths = facts.dimension(function (d) {
+                                        return d.date;
+                                    });
+
+                                    var volumeByMonthGroup = moveMonths.group().reduceCount(function (d) {
+                                        return d.date;
+                                    } );
+
+
+
+
+
+                                    lineChart
+                                            .width(width)
+                                            .height(400)
+                                            .transitionDuration(200)
+                                            .margins({top: 0, right: 50, bottom: 25, left: 40})
+                                            .dimension(moveMonths)
+                                            .mouseZoomable(true)
+                                            .rangeChart(songChart)
+                                            .x(d3.time.scale().domain([new Date(2011, 0, 1), new Date(2014, 12, 31)]))
+                                            .ordinalColors(['#81b71a'])
+                                            //.round(d3.time.days.round)
+                                            .xUnits(d3.time.days)
+                                            .centerBar(true)
+                                            .elasticY(true)
+                                            .brushOn(true)
+                                            .group(volumeByMonthGroup);
+//                                            .xAxis()
+//                                            .ticks(20)
+//                                            .tickFormat(function(h){if(h == 0) return "12 AM"; else if(h < 12) return h + " AM"; else if (h == 12) return h + " PM" ; else if(h-12 == 12) return ""; else return (h-12)+" PM"})
+
+
+                                    songChart.width(width)
+                                            .height(120)
+                                            .dimension(moveMonths)
+                                            .group(volumeByMonthGroup)
+                                            .renderlet(function(chart){
+                                                chart.selectAll("g.x text")
+                                                        .attr('transform', "translate(0,20) rotate(-65)");
+                                            })
+                                            .transitionDuration(300)
+                                            .margins({top: 0, right: 50, bottom:50, left: 40})
+                                            .centerBar(true)
+                                            .ordinalColors(['#81b71a'])
+                                            .gap(1)
+                                            .x(d3.time.scale().domain([new Date(2011, 0, 1), new Date(2014, 12, 31)]))
+                                            .round(d3.time.days.round)
+                                            .alwaysUseRounding(true)
+                                            .xUnits(d3.time.days)
+
+
+                                    ;
+
+
+                                    songChart.yAxis().ticks(0).tickFormat(function(v) { return ""; });
+
+
+
+                                    // Render the Charts
+
+                                    dc.renderAll();
+
+                                    console.log(artists);
+
+                                });
+
+
+
+                                function redrawVis(){
+                                    d3.csv("data/data.csv", function (data) {
+
+                                        // format our data
+                                        //var dtgFormat = d3.time.format("%Y-%m-%dT%H:%M:%S");
+                                        songs = [];
+                                        var flaggedSongs = []
+
+                                        data.forEach(function(d) {
+                                            d.Mes = d.Month;
+                                            d.Dia = +d.Day;
+                                            d.Ano = +d.Year;
+                                            d.Track = d.Song;
+                                            d.Artista = d.Artist;
+                                            var fullDate = convertMonthNameToNumber(d.Mes)+"/"+ d.Dia+"/"+ d.Ano;
+                                            d.date = dateFormat.parse(fullDate);
+
+                                            d.Tiempo = timeFormat.parse(d.Time);
+                                            if(d.Tiempo == null){
+                                                d.Tiempo = timeFormat2.parse(d.Time);
+                                                d.Tiempo.setHours(d.Tiempo.getHours() + 12);
+
+                                                if(d.Tiempo.getHours() < 12)
+                                                    d.Tiempo.setHours((d.Tiempo.getHours() + 12));
+
+                                            }//Parse time
+
+
+
+                                            checkAndAdd(d.Artista);
+
+                                            if(selArtists.indexOf(d.Artista) > -1)
+                                                checkSongsAndAdd(d.Track);//For new songs being added
+
+                                            if(removedArtists.indexOf(d.Artista) > -1)
+                                                flaggedSongs.push(d.Track);
+
+
+                                        });
+
+                                        //Populate Select for Songs
+
+
+
+
+                                        songs.sort();
+                                        var select = document.getElementById('e10');
+                                        for (var i = 0; i<= songs.length; i++){
+                                            if(songs[i] != undefined)
+                                            {
+                                                if(!$('#e10 option[value="' + songs[i] + '"]').length != 0)
+                                                {
+                                                    var opt = document.createElement('option');
+                                                    opt.value = songs[i];
+                                                    opt.innerHTML = songs[i];
+                                                    select.appendChild(opt);
+                                                }
+                                            }
+                                        }//Add new songs
+
+                                        for(var i = 0; i < flaggedSongs.length; i++){
+                                            $('#e10 option[value="' + flaggedSongs[i] + '"]').remove();
+                                        }//remove songs not needed
+
+                                        console.log(selSongs);
+
+                                        // Create the dc.js chart objects & link to div
+                                        var dataTable = dc.dataTable("#dc-table-graph");
+                                        var dayOfWeekChart = dc.rowChart("#day-of-week-chart");
+                                        var songChart = dc.barChart("#songs-per-day-chart");
+                                        var lineChart = dc.barChart("#songs-line-chart");
+
+
+                                        // Run the data through crossfilter and load our 'facts'
+                                        var facts = crossfilter(data);
+
+
+
+                                        // Create dataTable dimension
+                                        var timeDimension = facts.dimension(function (d) {
+                                            return d.Artista;
+                                        });
+
+
+
+                                        timeDimension.filter(function(d){
+                                            return selArtists.indexOf(d) > -1;
+                                        });
+
+
+                                        var songDimension = facts.dimension(function(d){
+                                           return d.Track;
+                                        });
+
+                                        songDimension.filter(function(d){
+                                            return selSongs.indexOf(d) > -1;
+                                        });
+
+
+                                        //Create day of week dimension
+                                        //Day of weekDimension
+                                        var dayOfWeek = facts.dimension(function (d) {
+                                            var day = d.date.getDay();
+                                            var name=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+                                            return day+"."+name[day];
+                                        });
+
+
+
+                                        var dayOfWeekGroup = dayOfWeek.group();
+
+                                        //Daily song plays
+                                        var dayDimension = facts.dimension(function (d) {
+                                            return d.date;
+                                        });
+
+                                        var dayValueGroupCount = dayDimension.group()
+                                                .reduceCount(function(d) { return d.date; }) // counts
+
+
+                                        // Setup the charts
+
+                                        // Table of earthquake data
+                                        dataTable.width(960).height(800)
+                                                .dimension(timeDimension)
+                                                .group(function(d) { return ""
+                                                })
+                                                .size(100)
+                                                .columns([
+                                                    function(d) { return d.Mes; },
+                                                    function(d) { return d.Dia; },
+                                                    function(d) { return d.Ano; },
+                                                    function(d) { return d.Track; },
+                                                    function(d) { return d.Artista; },
+                                                    function(d) { return d.Tiempo; }
+                                                ])
+                                                .sortBy(function(d){ return d.date })
+                                                ;
+
+
+
+                                        //Day of week data
+                                        var width = document.getElementById("box").offsetWidth;
+                                        dayOfWeekChart.width(width)
+                                                .height(220)
+                                                .group(dayOfWeekGroup)
+                                                .dimension(dayOfWeek)
+                                                .ordinalColors(['#1b972b','#239D50','#359D54','#459D6A','#539D6C','#659D54','#759D6A'])
+                                                .label(function (d){
+                                                    return d.key.split(".")[1];
+                                                })
+                                                .title(function (d) {
+                                                    return d.value;
+                                                })
+                                            //.elasticX(true)
+                                                .xAxis().ticks(4);
+
+                                        // time chart
+                                        var moveMonths = facts.dimension(function (d) {
+                                            return d.date;
+                                        });
+
+                                        var volumeByMonthGroup = moveMonths.group().reduceSum(function (d) {
+                                            return d.date;
+                                        } );
+
+                                        //Render Line Chart
+                                        var moveTime = facts.dimension(function (d) {
+                                            return d.Tiempo.getHours();
+                                        });
+
+                                        var timeByMonthGroup = moveTime.group().reduceCount(function (d) {
+                                            return d.Tiempo.getHours();
+                                        } );
+
+                                        console.log(timeByMonthGroup);
+
+                                        // time chart
+                                        var moveMonths = facts.dimension(function (d) {
+                                            return d.date;
+                                        });
+
+                                        var volumeByMonthGroup = moveMonths.group().reduceCount(function (d) {
+                                            return d.date;
+                                        } );
+
+
+
+
+
+                                        lineChart
+                                                .width(width)
+                                                .height(500)
+                                                .transitionDuration(100)
+                                                .margins({top: 0, right: 50, bottom: 25, left: 40})
+                                                .dimension(moveMonths)
+//                                            .group(timeByMonthGroup)
+                                                .mouseZoomable(true)
+                                                .rangeChart(songChart)
+                                                .x(d3.time.scale().domain([new Date(2011, 0, 1), new Date(2014, 12, 31)]))
+                                            //.round(d3.time.days.round)
+                                                .xUnits(d3.time.days)
+                                                .elasticY(true)
+                                                .brushOn(false)
+                                                .group(volumeByMonthGroup);
+//                                            .xAxis()
+//                                            .ticks(20)
+//                                            .tickFormat(function(h){if(h == 0) return "12 AM"; else if(h < 12) return h + " AM"; else if (h == 12) return h + " PM" ; else if(h-12 == 12) return ""; else return (h-12)+" PM"})
+
+
+                                        songChart.width(width)
+                                                .height(120)
+                                                .dimension(moveMonths)
+                                                .mouseZoomable(false)
+                                                .group(volumeByMonthGroup)
+                                                .renderlet(function(chart){
+                                                    chart.selectAll("g.x text")
+                                                            .attr('transform', "translate(0,20) rotate(-65)");
+                                                })
+                                                .transitionDuration(300)
+                                                .margins({top: 0, right: 50, bottom:50, left: 40})
+                                                .centerBar(true)
+                                                .gap(1)
+                                                .x(d3.time.scale().domain([new Date(2011, 0, 1), new Date(2014, 12, 31)]))
+                                                .round(d3.time.days.round)
+                                                .alwaysUseRounding(true)
+                                                .xUnits(d3.time.days)
+
+
+                                        ;
+
+
+                                        songChart.yAxis().ticks(0).tickFormat(function(v) { return ""; });
+
+
+
+
+                                        dc.renderAll();
+                                });
+
+                                }
+
+
+
+
+
+                                function convertMonthNameToNumber(monthName) {
+                                    var myDate = new Date(monthName + " 1, 2000");
+                                    var monthDigit = myDate.getMonth();
+                                    return isNaN(monthDigit) ? 0 : (monthDigit + 1);
+                                }
+
+
+                                function checkAndAdd(name) {
+                                    var id = artists.length + 1;
+                                    var found = artists.some(function (el) {
+                                        return el === name;
+                                    });
+                                    if (!found) { artists.push(name); }
+                                }
+
+
+                                function checkSongsAndAdd(name) {
+                                    var id = songs.length + 1;
+                                    var found = songs.some(function (el) {
+                                        return el === name;
+                                    });
+                                    if (!found) { songs.push(name); }
+                                }
+
+
+                                $("#e9").on("change", function(e){
+                                    console.log("Before: " + selArtists);
+
+                                    var selections = $("#e9").select2('val');
+                                    console.log("After: "+ selections);
+
+                                    if(selections.length < selArtists.length)
+                                        removedArtists = arr_diff(selections,selArtists);
+
+                                    console.log("Difference: " + removedArtists);
+
+                                    selArtists = selections;
+                                    redrawVis();
+                                });
+
+                                $("#e10").on("change", function(e){
+                                    var selections = $("#e10").select2('val');
+
+                                    console.log(selections + " " + selSongs);
+
+                                    selSongs = selections;
+                                    redrawVis();
+                                });
+
+                                function arr_diff(a1, a2)
+                                {
+                                    var a=[], diff=[];
+                                    for(var i=0;i<a1.length;i++)
+                                        a[a1[i]]=true;
+                                    for(var i=0;i<a2.length;i++)
+                                        if(a[a2[i]]) delete a[a2[i]];
+                                        else a[a2[i]]=true;
+                                    for(var k in a)
+                                        diff.push(k);
+                                    return diff;
+                                }
+
+
+
+                            </script>
+
+
+
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Fun Stuff</h2>
+							</header>
+
+							<p>Here are some cool presets you can look into given the data. These include things such as "Most popular artist, song, etc." </p>
+
+                            <h3>Most Popular Songs (All Time)</h3>
+
+                            <div class="row">
+                                <h4>1</h4><iframe src="https://embed.spotify.com/?uri=spotify:track:7iFOe4rEvgojNoeSm5PBJE" width="250" height="350" frameborder="0" allowtransparency="true"></iframe>
+                            </div>
+
+                            <div class="row">
+                                <h4>2</h4><iframe src="https://embed.spotify.com/?uri=spotify:track:6HV70OYSXf3Amn53YmASbI" width="250" height="350" frameborder="0" allowtransparency="true"></iframe>
+                            </div>
+                            <div class="row">
+                                <h4>3</h4><iframe src="https://embed.spotify.com/?uri=spotify:track:1zFl7vjNX3JJ3gQR2vM3LU" width="250" height="350" frameborder="0" allowtransparency="true"></iframe>
+                            </div>
+                            <div class="row">
+                                <h4>4</h4><iframe src="https://embed.spotify.com/?uri=spotify:track:6Vjwpv8CQhdFHSu3LBF6ly" width="250" height="350" frameborder="0" allowtransparency="true"></iframe>
+                            </div>
+                            <div class="row">
+                                <h4>5</h4><iframe src="https://embed.spotify.com/?uri=spotify:track:2dXngWQnyjgJxn3PiGxzlr" width="250" height="350" frameborder="0" allowtransparency="true"></iframe>
+                            </div>
+
+                            <h3>Most Popular Artist (All Time)</h3>
+
+
+						</div>
+					</section>
+			
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p>Elementum sem parturient nulla quam placerat viverra 
+							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia 
+							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc 
+							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
+							
+							<form method="post" action="#">
+								<div class="row half">
+									<div class="6u"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="6u"><input type="text" name="email" placeholder="Email" /></div>
+								</div>
+								<div class="row half">
+									<div class="12u">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<div class="12u">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+			
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				
+			</div>
+
+	</body>
+</html>
